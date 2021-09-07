@@ -13,7 +13,8 @@ times = st.radio('Numero de times', [2, 3, 4])
 jog_port_time = st.radio('Jogadores por time', [4, 5, 6, 7])
 
 def times_f(jogadores_hoje, times, jog_port_time):
-    out = pd.DataFrame(columns=np.arange(1, times+1,1), index=np.arange(1, jog_port_time+1))
+    columns = [ f'time {i+1}' for i in range(len(times)+1) ]
+    out = pd.DataFrame(columns=columns, index=np.arange(1, jog_port_time+1))
     jog_sorteados = []
     while len(jogadores_hoje) > 0:
         i = len(jogadores_hoje)
