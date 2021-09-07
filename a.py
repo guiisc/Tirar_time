@@ -9,8 +9,8 @@ st.header('Futebol de Terça')
     
 jogadores_hoje = st.multiselect('Quem ta aqui hoje', options=jogadores)
 
-times = st.radio('Numero de times', [2, 3])
-jog_port_time = st.radio('Jogadores por time', [4, 5, 6])
+times = st.radio('Numero de times', [2, 3, 4])
+jog_port_time = st.radio('Jogadores por time', [4, 5, 6, 7])
 
 def times_f(jogadores_hoje, times, jog_port_time):
     out = pd.DataFrame(columns=np.arange(1, times+1,1), index=np.arange(1, jog_port_time+1))
@@ -29,4 +29,5 @@ def times_f(jogadores_hoje, times, jog_port_time):
 
 if st.button('Tirar times'):
     out = times_f(jogadores_hoje, times, jog_port_time)
+    st.header(f'{len(jogadores_hoje)} pessoas aqui hoje')
     st.dataframe(out)
