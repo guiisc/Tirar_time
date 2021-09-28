@@ -3,7 +3,8 @@ import pandas as pd
 import streamlit as st
 
 jogadores = ['Claudinho', 'Danilo', 'Igor', 'Douglas', 'Emerson', 'Gui', 'Danilo Santista', 'Andrade',
-'Renan', 'Caique', 'Kauê', 'João', 'Tom', 'Jé', 'Fernandinho', 'Luiz', 'Elton', 'Tiaguinho', 'Paraíba']
+'Renan', 'Caique', 'Kauê', 'João', 'Tom', 'Jé', 'Fernandinho', 'Luiz', 'Elton', 'Tiaguinho', 'Paraíba',
+'Rafael', 'Danilo', 'Giovani', 'Matheus', 'Jeferson']
 
 st.header('Futebol de Terça')
     
